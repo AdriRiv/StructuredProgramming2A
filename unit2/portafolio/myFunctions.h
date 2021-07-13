@@ -23,12 +23,18 @@ int addTwoNumbers(int arg1, int arg2){ //declarando
 
 //////////////////////// Functions with arguments Class
 
-//Paso de argumentos por dirección
+//Paso de argumentos por valor
 void modifyVariables( int arg1, int arg2){
     arg1= arg1*2;
     arg2= arg2*2;
     return;
 }
 
+//Paso de Argumentos por Dirección
+void modifyVariablesAdress(int* ptr1, int*ptr2, int multiplo){
+    *ptr1= *ptr1 * multiplo;
+    *ptr2= *ptr2 * multiplo;
+    return;
+}
 
 
