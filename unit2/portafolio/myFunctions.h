@@ -1,6 +1,14 @@
 #include <stdio.h>
-#include <stdlib.h> //atoi, atof, sprintf
+#include <stdlib.h> //atoi, atof, sprintf, size_t
 #include <string.h> //strcpy
+
+
+///Structure class
+typedef struct Array{
+    int* adarray;
+}Array;
+
+
 
 //////////////////Functions Intro C Class
 #define pi 3.1416
@@ -37,4 +45,43 @@ void modifyVariablesAdress(int* ptr1, int*ptr2, int multiplo){
     return;
 }
 
+//////Tarea Swap Values //////
 
+void swapValues(int* val1, int* val2){
+    int temp;
+    temp= *val1;
+    *val1= *val2;
+    *val2= temp;
+
+}
+
+
+/////Clase Estructuras
+/////// stblib size_t 
+
+
+void fillArray(int array[], size_t tam){
+    for(size_t i=0;i < tam; i++){
+        array[i] =i*2;
+    }
+    return;
+}
+
+
+
+void printArray1D(int array[], size_t tam){
+    for(size_t i=0; i < tam; i++){
+        printf("%i\n", array[i]);
+    }
+    return; 
+}
+
+
+Array* returnArray(){
+    Array* anArrayType = (Array*)malloc(sizeof(Array));
+    printf("Address anArrayType: %p \t anArrayType= %p\n", &anArrayType, anArrayType),
+    anArrayType->adarray[0]= 16;
+    anArrayType->adarray[1]= 18;
+   
+    return anArrayType;
+};
