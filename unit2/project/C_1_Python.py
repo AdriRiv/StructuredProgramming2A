@@ -10,6 +10,7 @@ indx= 0
 def changeTemp(idx):
     
     for idx in range(0, len(tempF)):
+    
         tempC.append(round((5*(tempF[idx]-32)/9), 2))
 
 def averageCelsius(num):
