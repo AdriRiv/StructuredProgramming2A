@@ -14,8 +14,12 @@ typedef struct wizard{
     char* name;
     //more atributes
 }Wizard;   //Lleva ; al final 
+
 // typedef struct wizard Wizard;
 
+struct Array{
+    int* adarray;
+};
 
 int main(){
 
@@ -30,5 +34,10 @@ int main(){
     printf("%d", myIntArray[2]);
     printf("%d", myIntArray[3]);
     printf("%d\n", myIntArray[4]);
+
+    Array** myarray= aFunction();
+    printf("%p\n", myarray);
+
+
     return 0; 
 }
